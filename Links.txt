@@ -1,0 +1,3 @@
+git: https://github.com/guilhermetscapin/Exame-PPI-PetShop.git
+
+vercel: https://exame-ppi-pet-shop.vercel.app/

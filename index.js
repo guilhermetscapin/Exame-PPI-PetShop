@@ -21,7 +21,6 @@ server.use(session({
 server.use(express.urlencoded({ extended: true }));
 server.use(cookieParser());
 
-// ====== FUNÇÃO BASE HTML ======
 function paginaBase(titulo, conteudo) {
     return `
     <!DOCTYPE html>
@@ -49,7 +48,6 @@ function paginaBase(titulo, conteudo) {
     `;
 }
 
-// ====== LOGIN ======
 server.get("/login", (req, res) => {
     res.send(paginaBase("Login", `
         <div class="row justify-content-center">
@@ -91,7 +89,6 @@ server.get("/logout", (req, res) => {
     res.redirect("/login");
 });
 
-// ====== MENU ======
 server.get("/", verificarUsuarioLogado, (req, res) => {
     const ultimoAcesso = req.cookies.ultimoAcesso;
     res.cookie("ultimoAcesso", new Date().toLocaleString());
@@ -110,7 +107,6 @@ server.get("/", verificarUsuarioLogado, (req, res) => {
     `));
 });
 
-// ====== INTERESSADOS ======
 server.get("/cadastroInteressado", verificarUsuarioLogado, (req, res) => {
     res.send(paginaBase("Interessados", `
         <div class="card p-4 shadow">
@@ -172,7 +168,6 @@ server.get("/listarInteressados", verificarUsuarioLogado, (req, res) => {
     `));
 });
 
-// ====== PETS ======
 server.get("/cadastroPet", verificarUsuarioLogado, (req, res) => {
     res.send(paginaBase("Pets", `
         <div class="card p-4 shadow">
