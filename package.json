@@ -1,0 +1,34 @@
+{
+  "name": "exame-ppi-petshop",
+  "version": "1.0.0",
+  "description": "Trabalho usando express, cookies e session",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermetscapin/Exame-PPI-PetShop.git"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "Session",
+    "Cookies",
+    "HTTP"
+  ],
+  "author": "Guilherme Torres Scapin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermetscapin/Exame-PPI-PetShop/issues"
+  },
+  "homepage": "https://github.com/guilhermetscapin/Exame-PPI-PetShop#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "session": "^0.1.0"
+  }
+}
